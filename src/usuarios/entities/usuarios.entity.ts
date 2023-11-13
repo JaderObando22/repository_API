@@ -17,7 +17,7 @@ name: string;
 email: string;
 
 @Column({type: 'varchar', nullable: false})
-password: string;
+password: number;
 
 @Column({type: 'varchar', nullable: false})
 sexo: string;
@@ -27,9 +27,6 @@ active: boolean;
 
 @Column({type: 'int4', nullable: false})
 stock: number;
-
-@Column({ type: 'text', array: true, default: ['usuario|'] })
-roles: string[];
 
 autor: Usuarios;
 @OneToMany(() => UsuariosImage, (usuarioImage) => usuarioImage.usuarios, {

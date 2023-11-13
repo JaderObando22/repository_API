@@ -11,7 +11,7 @@ export class Proveedor {
     proveedor: string;
 
     @Column({ type: 'int4', nullable: true })
-    Users_id: number;
+    user_id: number;
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP '})
     created_at: Date

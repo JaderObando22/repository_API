@@ -19,7 +19,7 @@ export class CreateComidomiDto {
     @IsNotEmpty()
     precio: number;
 
-    @IsNumber()
+    @IsString()
     @IsNotEmpty()
     direccion: string;
 

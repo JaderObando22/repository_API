@@ -8,9 +8,17 @@ import { Categoria } from 'src/comidomi/entities/categoria.entity';
 import { Proveedor } from './comidomi/entities/proveedor.entity';
 import { Destino } from './comidomi/entities/destino.entity';
 import { Origen } from './comidomi/entities/origen.entity';
+import { DeliveryModule } from './delivery/delivery.module';
+import { PedidoModule } from './pedido/pedido.module';
+import { FilesModule } from './files/files.module';
+import { FilesPDFModule } from './filesPDF/files.PDF.module';
+import { ClienteModule } from './cliente/cliente.module';
+
+
+
 
 @Module({
-  imports: [,
+  imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -28,6 +36,12 @@ import { Origen } from './comidomi/entities/origen.entity';
     Proveedor,
     Destino,
     Origen,
+    DeliveryModule,
+    PedidoModule,
+    FilesModule,
+    FilesPDFModule,
+    ClienteModule,
+    
 
 
 

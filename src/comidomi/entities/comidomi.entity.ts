@@ -1,5 +1,5 @@
+import { Usuarios } from 'src/usuarios/entities/usuarios.entity';
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Usuarios } from '../../usuarios/entities/usuarios.entity';
 import { Categoria } from './categoria.entity';
 import { Proveedor } from './proveedor.entity';
 import { ComidomiImage } from './comidomi-image.entity';
@@ -10,19 +10,22 @@ export class Comidomi {
     id?: number;
 
     @Column({ type: 'varchar', length: 100, nullable: false })
-    name: string;
+    comida: string;
 
     @Column({ type: 'varchar', length: 300, nullable: false })
-    description: string;
+    descripcion: string;
 
     @Column({ type: 'int4', nullable: false})
-    price: number;
+    precio: number;
 
-    @Column({ type: 'int4', nullable: false})
-    stock: number;  
+    @Column({ type: 'varchar', nullable: false})
+    direccion: string;  
 
-    @Column({ type: 'varchar', nullable: true })
-    filename: string;
+    @Column({ type: 'int4', nullable: true })
+    origen_id: string;
+
+    @Column({ type: 'int4', nullable: true })
+    destino_id: string;
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP '})
     created_at: Date

@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, } from 'typeorm';
-import { Comidomi } from './comidomi.entity';
+import { Comidomi } from 'src/comidomi/entities/comidomi.entity';
 
 
 @Entity()

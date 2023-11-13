@@ -10,7 +10,7 @@ import { CreateDestinoDto } from '../dto/destino.dto';
 @Injectable()
 export class DestinoService {
   constructor(
-    @InjectRepository( Destino)
+    @InjectRepository(Destino)
     private readonly destinoRepo: Repository<Destino>,
   ) {}
 
@@ -19,7 +19,7 @@ export class DestinoService {
     const destinos = this.destinoRepo.create(createDestinoDto);
     await this.destinoRepo.save(destinos);
 
-    return Destino;
+    return destinos;
   }
 
     //Encontrar una categoria

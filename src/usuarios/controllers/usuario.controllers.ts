@@ -12,19 +12,19 @@ import { UsuariosService } from '../services/usuario.service';
 import { LoginUsuariosDto } from '../dto/login-usuario.dto';
 
 
- @Controller('usuarios')
+ @Controller('Usuarios')
  export class UsuariosController {
    constructor(private readonly UsuarioService: UsuariosService) {
    }
 
-   @Post('login')
+   /*@Post('login')
    async login(@Body() login: LoginUsuariosDto){
     return this.UsuarioService.login(login);
-   } 
+   } */
 
    @Post()
-   async create(@Body() usuariosDto: CreateUsuariosDto ) {
-     return await this.UsuarioService.create(usuariosDto);
+   async create(@Body() UsuariosDto: CreateUsuariosDto ) {
+     return await this.UsuarioService.create(UsuariosDto);
    }
 
    @Get() 

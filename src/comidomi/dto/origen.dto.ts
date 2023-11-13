@@ -8,11 +8,21 @@ export class CreateOrigenDto {
     @IsNumber()
     id?: number;
 
+    @IsString()
     @IsNotEmpty()
     user_id: number;
 
+    @IsString()
     @IsNotEmpty()
-    categoria: string;
+    lugar: string;
+
+    @IsString()
+    @IsNotEmpty()
+    recorrido: string;
+
+    @IsString()
+    @IsNotEmpty()
+    destino: string;
 
     @IsNumber()
     @IsNotEmpty()

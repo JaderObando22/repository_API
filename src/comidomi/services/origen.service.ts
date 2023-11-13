@@ -10,7 +10,7 @@ import { CreateOrigenDto } from '../dto/origen.dto';
 @Injectable()
 export class OrigenService {
   constructor(
-    @InjectRepository( Origen)
+    @InjectRepository(Origen)
     private readonly origenRepo: Repository<Origen>,
   ) {}
 

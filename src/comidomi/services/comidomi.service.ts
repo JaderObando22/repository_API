@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm"; 
-import { Comidomi } from 'src/comidomi/entities/comidomi.entity';
+import { InjectRepository } from "@nestjs/typeorm";
+import { Comidomi } from 'src/comidomi/entities/comidomi.entity'; 
 import { DataSource, Repository } from "typeorm";
 import { CreateComidomiDto } from "../dto/comidomi.dto";
 import { ComidomiImage } from "../entities/comidomi-image.entity";
@@ -114,8 +114,7 @@ export class ComidomiService{
           this.comidomiImageRepo.create({ url: image }),
         );
       } else {
-        comidomi
-        .images = await this.comidomiImageRepo.findBy ({ comidomi: { id } });
+        comidomi.images = await this.comidomiImageRepo.findBy ({ comidomi: { id } });
       }
 
       //Guardamos el producto

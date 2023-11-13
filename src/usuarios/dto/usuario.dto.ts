@@ -1,4 +1,4 @@
-import { IsArray, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength } from 'class-validator';
+import { IsArray, IsNotEmpty, IsNumber, IsNumberString, IsOptional, IsString, MaxLength } from 'class-validator';
     
 
     export class CreateUsuariosDto {
@@ -14,14 +14,12 @@ import { IsArray, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength } from '
 
         @IsString()
         @IsNotEmpty()
-        @MaxLength(50)
-        password: string;
-
+        @MaxLength(300)
+        email: string;
 
         @IsString()
         @IsNotEmpty()
-        @MaxLength(300)
-        email: string;
+        password: number;
 
         @IsString()
         @IsNotEmpty()

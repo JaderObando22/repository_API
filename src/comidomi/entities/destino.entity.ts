@@ -6,14 +6,17 @@ import { Usuarios } from 'src/usuarios/entities/usuarios.entity';
 
 @Entity()
 export class Destino  {
-    @PrimaryGeneratedColumn({ type: 'int4'})
+    @PrimaryGeneratedColumn({ type: 'int4' })
     id?: number;
-
-    @Column({ type: 'varchar', nullable: false })
+    
+    @Column({ type: 'int4', nullable: false })
     user_id: number;
 
     @Column({ type: 'varchar', nullable: false })
-    categoria: string;
+    lugar: string;
+
+    @Column({ type: 'varchar', nullable: false })
+    direccion: string;
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP '})
     created_at: Date

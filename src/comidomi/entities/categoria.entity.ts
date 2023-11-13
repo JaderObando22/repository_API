@@ -1,6 +1,7 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn,  } from 'typeorm';
 import { CreateCategoriaDto } from '../dto/categoria.dto';
 import { Usuarios } from 'src/usuarios/entities/usuarios.entity';
+import { ComidomiImage } from './comidomi-image.entity';
 
 
 
@@ -9,9 +10,9 @@ export class Categoria  {
     @PrimaryGeneratedColumn({ type: 'int4'})
     id?: number;
 
-    @Column({ type: 'varchar', nullable: false })
+    @Column({ type: 'int4', nullable: false })
     user_id: number;
-
+    
     @Column({ type: 'varchar', nullable: false })
     categoria: string;
 

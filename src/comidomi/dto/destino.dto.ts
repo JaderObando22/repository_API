@@ -8,11 +8,17 @@ export class CreateDestinoDto {
     @IsNumber()
     id?: number;
 
+    @IsNumber()
     @IsNotEmpty()
     user_id: number;
 
+    @IsString()
     @IsNotEmpty()
-    categoria: string;
+    lugar: string;
+
+    @IsString()
+    @IsNotEmpty()
+    direccion: string;
 
     @IsNumber()
     @IsNotEmpty()

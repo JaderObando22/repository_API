@@ -9,11 +9,17 @@ export class Origen  {
     @PrimaryGeneratedColumn({ type: 'int4'})
     id?: number;
 
-    @Column({ type: 'varchar', nullable: false })
+    @Column({ type: 'int4', nullable: false })
     user_id: number;
 
     @Column({ type: 'varchar', nullable: false })
-    categoria: string;
+    lugar: string;
+
+    @Column({ type: 'varchar', nullable: false })
+    recorrido: string;
+
+    @Column({ type: 'varchar', nullable: false })
+    destino_id: number;
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP '})
     created_at: Date
